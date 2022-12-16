@@ -58,9 +58,55 @@ Route::get('/', function () {
             ],
         ]
     ];
-    return view('home', $data);
+    $comics = config('comics');
+    return view('home', $data, compact("comics"));
 });
 
-Route::get('/comics', function () {
-    return view('comics',);
+Route::get('/comic/{index}', function ($index) {
+    $data = [
+        "headerItems" => [
+            [
+                "name" => "Characters",
+                "href" => "/characters"
+            ],
+            [
+                "name" => "Comics",
+                "href" => "/comics"
+            ],
+            [
+                "name" => "Movies",
+                "href" => "/movies"
+            ],
+            [
+                "name" => "TV",
+                "href" => "/tv"
+            ],
+            [
+                "name" => "Games",
+                "href" => "/games"
+            ],
+            [
+                "name" => "Collectibles",
+                "href" => "/collectibles"
+            ],
+            [
+                "name" => "Videos",
+                "href" => "/videos"
+            ],
+            [
+                "name" => "Fans",
+                "href" => "/fans"
+            ],
+            [
+                "name" => "News",
+                "href" => "/news"
+            ],
+            [
+                "name" => "Shop",
+                "href" => "/shop"
+            ],
+        ]
+    ];
+    $comics = config('comics');
+    return view('comic', $data, compact("comics"));
 });

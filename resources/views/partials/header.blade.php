@@ -8,7 +8,7 @@
             <ul>
                 @foreach ($headerItems as $item)
                     <li>
-                        <a href="">{{ $item['name'] }}</a>
+                        <a href="{{ $item['href'] }}">{{ $item['name'] }}</a>
                     </li>
                 @endforeach
             </ul>

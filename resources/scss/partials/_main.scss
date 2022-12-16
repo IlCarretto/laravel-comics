@@ -1,0 +1,19 @@
+.myContent-main {
+    padding: 2rem 0;
+    background-color: #1c1c1c;
+    color: white;
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .btn {
+        text-align: center;
+        .load-more {
+            color: white;
+            background-color: #0282f9;   
+            padding: .5rem 3rem;
+            font-size: .9rem;
+            font-weight: 600;
+        }
+    }
+}
